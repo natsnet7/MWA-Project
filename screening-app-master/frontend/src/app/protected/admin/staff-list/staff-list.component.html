@@ -1,0 +1,50 @@
+<div class="table-responsive invited">
+  <table class="table" >
+    <caption > Staffs </caption>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let staff of staffList; let i = index'>
+        <td>{{i+1}}</td>
+        <td>{{staff.name}}</td>
+        <td>{{staff.username}}</td>
+        <td>
+          <button class="btn btn-link"  (click)='setActive(staff, !staff.active)'>{{staff.active ? 'Deactivate' : 'Activate'}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> 
+</div>
+
+<div class="staff">
+  <h1 class="text-center">Add Staff</h1>
+  <div>
+      <form [formGroup]="staffForm" (ngSubmit)="onSubmit()" >
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" id="name" name="name" type="text" [formControl]="staffForm.get('name')">
+            <div class="alert alert-danger" *ngIf="(control.name.touched || control.name.dirty) && control.name.errors">
+              <span class="alert-text">required *</span>
+            </div>
+          </div>
+      
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" id="username" name="username" type="text" [formControl]="staffForm.get('username')">
+            <div class="alert alert-danger" *ngIf="(control.username.touched || control.username.dirty) && control.username.errors">
+              <span class="alert-text">required *</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" [disabled]="!staffForm.valid"> Add </button>
+          </div>
+        </form>
+  </div>
+</div>

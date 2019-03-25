@@ -1,0 +1,17 @@
+.login {
+  margin: 0 auto;
+  padding: 20px;
+}
+.login div:first-of-type {
+  width: 300px;
+  margin: 0 auto;
+}
+.login-error {
+  color: #ff0000;
+  font-size: 1.2em;
+}
+
+.alert-text {
+  color: #ff0000;
+  font-size: 1.2em;
+}

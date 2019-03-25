@@ -1,0 +1,16 @@
+.exam {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  color: black;
+}
+
+textarea {
+  min-height: 250px;
+}
+
+h2 {
+    color: white;
+    background-color: black;
+}

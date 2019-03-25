@@ -1,0 +1,122 @@
+/** Public Header Styles**/
+#header-nav {
+    background-color: #f6b319;
+    border-radius: 0;
+    border: 0;
+  }
+  
+  /* #logo-img {
+    width: 150px;
+    height: 150px;
+    margin: 10px 15px 10px 0;
+  } */
+  
+  .navbar-brand {
+    padding-top: 25px;
+  }
+  
+  .navbar-brand h1 {
+    /* App name */
+    font-family: 'Lora', serif;
+    color: green;
+    /* #557c3e; */
+    font-size: 1.5em;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+  }
+  
+  .navbar-brand a:hover,
+  .navbar-brand a:focus {
+    text-decoration: none;
+  }
+  
+  #nav-list {
+    margin-top: 10px;
+  }
+  
+  #nav-list a {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* #nav-list a:hover,  */
+  #nav-list a.active {
+    background: #E7E7E7;
+  }
+  
+  #nav-list a:hover {
+    background: grey;
+  }
+  
+  .navbar-header button.navbar-toggle,
+  .navbar-header .icon-bar {
+    border: 1px solid green;
+  }
+  
+  .navbar-header button.navbar-toggle {
+    clear: both;
+    margin-top: -30px;
+  }
+  
+  /********** Medium devices only **********/
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #logo-img {
+      width: 100px;
+      height: 100px;
+      margin: 5px 5px 5px 0;
+    }
+  }
+  
+  /********** Extra small devices only **********/
+  @media (max-width: 767px) {
+    .navbar-brand {
+      padding-top: 10px;
+      height: 80px;
+    }
+  
+    .navbar-brand h1 {
+      /* App name */
+      padding-top: 10px;
+      font-size: 5vw;
+      /* 1vw = 1% of viewport width */
+    }
+  
+    #collapsable-nav a {
+      /* Collapsed nav menu text */
+      font-size: 1.2em;
+    }
+  }
+  
+  /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+  @media (max-width: 479px) {
+    .navbar-brand h1 {
+      /* App name */
+      padding-top: 5px;
+      font-size: 6vw;
+    }
+  }
+  
+  /** 
+    Public Footer Styles
+  */
+  
+  /********** For all devices except extra small ones **********/
+  .public-panel-footer {
+    margin-top: 245px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: rgb(12, 77, 207);
+    color: white;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  
+  .public-panel-footer div.row {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  

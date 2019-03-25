@@ -1,0 +1,24 @@
+<div *ngIf='isLoaded' class="exam">
+  <h2 style='text-align:center'>
+    Time: {{minutes}}:{{seconds}} min
+  </h2>
+  <form [formGroup]='examForm' (ngSubmit)='onSubmit(f)' #f='ngForm'>
+    <div class="form-group">
+      <input class="form-control" readonly name='question1' formControlName='question1'>
+      <textarea class='form-control' name='answer1' formControlName='answer1'></textarea>
+    </div>
+    <hr class="my-4">
+    <div class="form-group">
+      <input class='form-control' readonly name='question2' formControlName='question2'>
+      <textarea class='form-control' name='answer2' formControlName='answer2'></textarea>
+    </div>
+    <hr class="my-4">
+    <div class="form-group">
+      <input class='form-control' readonly name='question3' formControlName='question3'>
+      <textarea class='form-control' name='answer3' formControlName='answer3'></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class='btn btn-primary' [disabled]='!examForm.valid'> Submit </button>
+    </div>
+  </form>
+</div>

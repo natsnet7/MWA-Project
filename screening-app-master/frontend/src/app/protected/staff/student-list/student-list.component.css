@@ -1,0 +1,21 @@
+.table-responsive {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.invited {
+    margin-bottom: 50px;
+}
+
+table caption {
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+button {
+  font-size: 1.25em;
+  font-weight: bold;
+}

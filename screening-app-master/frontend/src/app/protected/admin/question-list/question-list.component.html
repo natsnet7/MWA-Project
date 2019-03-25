@@ -1,0 +1,54 @@
+<div class="table-responsive invited">
+  <table class="table" >
+    <caption > Questions </caption>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Category</th>
+        <th>Question</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let question of questionList; let i = index'>
+        <td>{{i+1}}</td>
+        <td>{{question.category}}</td>
+        <td>{{question.question}}</td>
+        <td>
+          <button class="btn btn-link"  (click)='setActive(question, !question.active)'>{{question.active ? 'Deactivate' : 'Activate'}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> 
+</div>
+
+<div class="question">
+  <h1 class="text-center">Add Question</h1>
+  <div>
+      <form [formGroup]="questionForm" (ngSubmit)="onSubmit()" >
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input class="form-control" id="category" name="category" type="text" [formControl]="questionForm.get('category')">
+            <div class="alert alert-danger" *ngIf="(control.category.touched || control.category.dirty) && control.category.errors">
+              <span class="alert-text">required *</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="question">Question</label>
+            <input class="form-control" id="question" name="question" type="text" [formControl]="questionForm.get('question')">
+            <div class="alert alert-danger" *ngIf="(control.question.touched || control.question.dirty) && control.question.errors">
+              <span class="alert-text">required *</span>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <button class="btn btn-primary" [disabled]="!questionForm.valid"> Add </button>
+          </div>
+        </form>
+  </div>
+</div>
+
+
+
